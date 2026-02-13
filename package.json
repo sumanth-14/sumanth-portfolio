@@ -1,0 +1,17 @@
+{
+  "name": "sumanth-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Sai Sumanth Reddy Kachi - Full-Stack Engineer",
+  "main": "script.js",
+  "scripts": {
+    "dev": "http-server -p 3000 -c-1",
+    "start": "http-server -p 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack",
+    "engineer"
+  ],
+  "author": "Sai Sumanth Reddy Kachi",
+  "license": "MIT"
+}

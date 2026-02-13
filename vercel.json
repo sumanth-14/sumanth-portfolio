@@ -1,0 +1,9 @@
+{
+  "buildCommand": "echo 'No build needed for static site'",
+  "outputDirectory": ".",
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "autoJobCancelation": true
+  }
+}

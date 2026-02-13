@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Sumanth Reddy Kachi | Full-Stack Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👨‍💻</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="hero-greeting">Hi, I'm</span>
+        <span class="hero-name">Sai Sumanth Reddy Kachi</span>
+      </h1>
+      <div class="hero-role reveal">
+        <span class="role-line"></span>
+        <span class="role-text" id="typewriter"></span>
+        <span class="typewriter-cursor">|</span>
+      </div>
+      <p class="hero-desc reveal">
+        Full-Stack Engineer with <strong>3+ years</strong> building production MERN applications and
+        <strong>AI-integrated systems</strong>. Specializes in scalable web architectures, RESTful APIs,
+        and LLM integration for modern web platforms.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn--primary">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn--outline">
+          <span>Get In Touch</span>
+        </a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/sumanth-14" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/sumanth14" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:saisumanthreddy216@gmail.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll down</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&lt;about&gt;</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a passionate <strong>Full-Stack Engineer</strong> currently pursuing my Master's in Information Systems at the
+            <strong>University of Maryland, Baltimore County</strong>. With a strong foundation in computer science and hands-on
+            experience across the entire development stack, I bring ideas to life through clean, efficient code.
+          </p>
+          <p>
+            My journey spans from building enterprise mobility solutions for <strong>5,000+ employees</strong> to integrating
+            <strong>Azure OpenAI</strong> into healthcare portals. I thrive at the intersection of full-stack development and
+            AI integration, creating systems that are both powerful and intuitive.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring the latest in AI/ML, contributing to open-source projects,
+            or optimizing systems for better performance.
+          </p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="30">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">APIs Developed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="5000">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Users Impacted</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Client Applications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&lt;experience&gt;</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <!-- Minnodi -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer Intern</h3>
+                <div class="timeline-company">
+                  <i class="fas fa-building"></i> Minnodi LLC
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Nov 2025 – Present</span>
+                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Baltimore, MD</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Integrated <strong>Azure OpenAI</strong> into a healthcare portal to analyze patient history and lab results, designing custom prompts that generate pre-consultation summaries and risk assessments for clinicians.</li>
+              <li>Developed <strong>10 RESTful APIs</strong> using Express.js and Supabase for patient records management, implementing role-based access control across 4 user roles.</li>
+              <li>Designed a normalized Supabase database schema with optimized indexing, reducing patient search latency by <strong>35%</strong> while supporting 1,000+ active records.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Azure OpenAI</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Healthcare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RSM -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <div class="timeline-company">
+                  <i class="fas fa-building"></i> RSM US LLP
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Aug 2022 – Jun 2024</span>
+                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Designed and deployed a full-stack <strong>Enterprise Mobility Solution</strong> (React.js, Node.js, Express.js, Azure SQL, Redis) automating 95% of scheduling workflows for <strong>5,000+ employees</strong>.</li>
+              <li>Optimized frontend performance across <strong>10 React.js applications</strong> hosted on Azure, reducing latency by 30% and earning the <strong>"Shining Star" award</strong>.</li>
+              <li>Engineered a multi-functional API endpoint with role-based access across <strong>10 permission levels</strong>, serving 2,000+ users and 10 microservice teams.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Azure SQL</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Microservices</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cognizant -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Programmer Analyst</h3>
+                <div class="timeline-company">
+                  <i class="fas fa-building"></i> Cognizant Technology Solutions
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Mar 2022 – Jul 2022</span>
+                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Developed <strong>20+ React.js components</strong> with TypeScript using atomic design, reducing development time by 40%.</li>
+              <li>Designed efficient <strong>MongoDB data models</strong> with indexing and caching, reducing query execution time by 40% for high-traffic operations.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Atomic Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Schaffen -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <div class="timeline-company">
+                  <i class="fas fa-building"></i> Schaffen Softwares
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Aug 2020 – May 2021</span>
+                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Developed UI/UX screens for <strong>5 web applications</strong> using React.js, Material-UI, and CSS animations, achieving 96% design-to-code accuracy.</li>
+              <li>Built and integrated <strong>RESTful APIs</strong> using Node.js and Express.js to support dynamic data rendering, handling 500+ daily API calls.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Material-UI</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&lt;skills&gt;</span>
+        <h2 class="section-title">Tech <span class="gradient-text">Arsenal</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />JavaScript</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS" />TypeScript</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />Python</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML5</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />CSS3</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />C</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />C++</div>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Frameworks & Libraries</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />React.js</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" />Node.js</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />Express.js</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" />FastAPI</div>
+            <div class="skill-pill"><i class="fas fa-bolt" style="color:#646CFF; font-size:18px;"></i>Vite</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />Pandas</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />NumPy</div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>Databases & Storage</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />MySQL</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />PostgreSQL</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />MongoDB</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />Firebase</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" />Oracle</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" />Redis</div>
+            <div class="skill-pill"><i class="fas fa-cloud" style="color:#3ECF8E; font-size:18px;"></i>Supabase</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="S3" />AWS S3</div>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />AWS</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />Azure</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" />GCP</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />Docker</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="K8s" />Kubernetes</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />Jenkins</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />Git</div>
+            <div class="skill-pill"><i class="fas fa-envelope-open-text" style="color:#FF6C37; font-size:18px;"></i>Postman</div>
+          </div>
+        </div>
+
+        <!-- AI & ML -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI & Machine Learning</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill"><i class="fas fa-robot" style="color:#10A37F; font-size:18px;"></i>LLMs</div>
+            <div class="skill-pill"><i class="fas fa-magic" style="color:#AB68FF; font-size:18px;"></i>Prompt Engineering</div>
+            <div class="skill-pill"><i class="fas fa-search-plus" style="color:#FF6B6B; font-size:18px;"></i>RAG</div>
+            <div class="skill-pill"><i class="fas fa-project-diagram" style="color:#00D4AA; font-size:18px;"></i>Vector Databases</div>
+            <div class="skill-pill"><i class="fas fa-cog" style="color:#10A37F; font-size:18px;"></i>OpenAI API</div>
+            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure AI" />Azure OpenAI</div>
+            <div class="skill-pill"><i class="fas fa-link" style="color:#1C3C3C; font-size:18px;"></i>LangChain</div>
+          </div>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+            <h3>Core Competencies</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill"><i class="fas fa-exchange-alt" style="color:#61DAFB; font-size:18px;"></i>REST APIs</div>
+            <div class="skill-pill"><i class="fas fa-cubes" style="color:#FF9800; font-size:18px;"></i>Microservices</div>
+            <div class="skill-pill"><i class="fas fa-drafting-compass" style="color:#7C4DFF; font-size:18px;"></i>System Design</div>
+            <div class="skill-pill"><i class="fas fa-balance-scale" style="color:#00BCD4; font-size:18px;"></i>Load Balancing</div>
+            <div class="skill-pill"><i class="fas fa-server" style="color:#F44336; font-size:18px;"></i>Caching</div>
+            <div class="skill-pill"><i class="fas fa-shield-alt" style="color:#4CAF50; font-size:18px;"></i>API Security</div>
+            <div class="skill-pill"><i class="fas fa-sync-alt" style="color:#2196F3; font-size:18px;"></i>Agile/Scrum</div>
+            <div class="skill-pill"><i class="fas fa-vial" style="color:#E91E63; font-size:18px;"></i>TDD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&lt;projects&gt;</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Invenio -->
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-card-content">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sumanth-14" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Invenio</h3>
+            <p class="project-subtitle">AI-Powered Job Discovery Platform</p>
+            <p class="project-desc">
+              End-to-end job discovery pipeline with automated web scraping, AI-powered profile matching using Gemini 3 Flash,
+              and real-time email notifications. Enables 15 users to track opportunities across 20 organizations with minimal manual effort.
+            </p>
+            <div class="project-tech">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>Gemini 3 Flash</span>
+              <span>Supabase</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><strong>20</strong> Organizations</div>
+              <div class="metric"><strong>15</strong> Active Users</div>
+              <div class="metric"><strong>AI</strong> Matching</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- We Zaap -->
+        <div class="project-card reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-card-content">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-microphone-alt"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sumanth-14" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">We Zaap</h3>
+            <p class="project-subtitle">AI Interview Simulator</p>
+            <p class="project-desc">
+              AI-powered interview simulator supporting 10 job roles with lazy loading and RAG-based context retrieval
+              for role-specific questions. Built with a FastAPI backend and React frontend, currently serving 50+ students.
+            </p>
+            <div class="project-tech">
+              <span>React.js</span>
+              <span>FastAPI</span>
+              <span>RAG</span>
+              <span>PostgreSQL</span>
+              <span>LLMs</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><strong>10</strong> Job Roles</div>
+              <div class="metric"><strong>50+</strong> Students</div>
+              <div class="metric"><strong>RAG</strong> Powered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&lt;education&gt;</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="education-grid">
+        <div class="edu-card reveal">
+          <div class="edu-card-accent"></div>
+          <div class="edu-card-content">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-details">
+              <h3>Master of Science</h3>
+              <p class="edu-field">Information Systems</p>
+              <p class="edu-school"><i class="fas fa-university"></i> University of Maryland, Baltimore County</p>
+              <div class="edu-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Baltimore, MD</span>
+                <span><i class="fas fa-calendar"></i> Expected May 2026</span>
+              </div>
+              <div class="edu-gpa">
+                <span class="gpa-label">GPA</span>
+                <span class="gpa-value">3.85</span>
+              </div>
+              <div class="edu-coursework">
+                <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Software Engineering, Advanced Database,
+                Cloud Computing, System Design
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card-accent"></div>
+          <div class="edu-card-content">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-details">
+              <h3>Bachelor of Science</h3>
+              <p class="edu-field">Computer Science</p>
+              <p class="edu-school"><i class="fas fa-university"></i> Dayananda Sagar Institutions</p>
+              <div class="edu-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
+                <span><i class="fas fa-calendar"></i> Aug 2018 – Jul 2022</span>
+              </div>
+              <div class="edu-gpa">
+                <span class="gpa-label">GPA</span>
+                <span class="gpa-value">3.77</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&lt;contact&gt;</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content">
+        <p class="contact-desc reveal">
+          I'm currently open to new opportunities and would love to hear from you.
+          Whether you have a question, a project idea, or just want to say hello — my inbox is always open!
+        </p>
+        <div class="contact-cards reveal">
+          <a href="mailto:saisumanthreddy216@gmail.com" class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">saisumanthreddy216@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+16674459499" class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Phone</span>
+              <span class="contact-card-value">667-445-9499</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/sumanth14" target="_blank" class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">linkedin.com/in/sumanth14</span>
+            </div>
+          </a>
+          <a href="https://github.com/sumanth-14" target="_blank" class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">GitHub</span>
+              <span class="contact-card-value">github.com/sumanth-14</span>
+            </div>
+          </a>
+        </div>
+        <a href="mailto:saisumanthreddy216@gmail.com" class="btn btn--primary btn--large reveal">
+          <span>Say Hello</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-text">Designed & Built by <strong>Sai Sumanth Reddy Kachi</strong></p>
+        <div class="footer-socials">
+          <a href="https://github.com/sumanth-14" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/sumanth14" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:saisumanthreddy216@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
