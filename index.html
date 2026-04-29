@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sai Sumanth Reddy Kachi | Full-Stack Engineer</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👨‍💻</text></svg>" />
+  <title>Sai Sumanth Reddy Kachi | AI Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🤖</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 <body>
-  <!-- Cursor Glow -->
+  <!-- Custom Cursor -->
   <div class="cursor-glow" id="cursorGlow"></div>
-
-  <!-- Noise Overlay -->
-  <div class="noise-overlay"></div>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
@@ -25,65 +28,87 @@
         <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket"> /&gt;</span>
       </a>
       <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
         <a href="#education" class="nav-link">Education</a>
-        <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
+        <a href="#contact" class="nav-link nav-link--cta">Contact</a>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <div class="hero-grid"></div>
+      <div class="hero-grid-bg"></div>
+      <div class="hero-particles" id="heroParticles"></div>
       <div class="hero-orb hero-orb--1"></div>
       <div class="hero-orb hero-orb--2"></div>
       <div class="hero-orb hero-orb--3"></div>
     </div>
-    <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        Available for opportunities
+    <div class="hero-split">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="hero-name">Sai Sumanth<br>Reddy Kachi</span>
+        </h1>
+        <div class="hero-roles">
+          <span class="role-text" id="typewriter"></span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          <strong>AI Engineer</strong> with 3+ years of experience building production LLM systems.
+          Experienced in <strong>RAG pipelines, multi-agent orchestration</strong>, and
+          <strong>MCP-based AI integration</strong> across healthcare and enterprise platforms.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn--primary magnetic">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="Sumanth_AIEngineer_Resume.pdf" download class="btn btn--outline magnetic">
+            <span>Resume</span>
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/sumanth-14" target="_blank" class="social-link magnetic" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/sumanth14" target="_blank" class="social-link magnetic" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:saisumanthreddy216@gmail.com" class="social-link magnetic" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+16674459499" class="social-link magnetic" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
       </div>
-      <h1 class="hero-title reveal">
-        <span class="hero-greeting">Hi, I'm</span>
-        <span class="hero-name">Sai Sumanth Reddy Kachi</span>
-      </h1>
-      <div class="hero-role reveal">
-        <span class="role-line"></span>
-        <span class="role-text" id="typewriter"></span>
-        <span class="typewriter-cursor">|</span>
-      </div>
-      <p class="hero-desc reveal">
-        Full-Stack Engineer with <strong>3+ years</strong> building production MERN applications and
-        <strong>AI-integrated systems</strong>. Specializes in scalable web architectures, RESTful APIs,
-        and LLM integration for modern web platforms.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="#projects" class="btn btn--primary">
-          <span>View My Work</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#contact" class="btn btn--outline">
-          <span>Get In Touch</span>
-        </a>
-      </div>
-      <div class="hero-socials reveal">
-        <a href="https://github.com/sumanth-14" target="_blank" class="social-link" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/sumanth14" target="_blank" class="social-link" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:saisumanthreddy216@gmail.com" class="social-link" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-placeholder" id="heroImagePlaceholder">
+            <i class="fas fa-user"></i>
+            <span>Your Photo Here</span>
+          </div>
+        </div>
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring hero-image-ring--2"></div>
+        <div class="hero-image-glow"></div>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -98,25 +123,25 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">&lt;about&gt;</span>
         <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-        <div class="section-line"></div>
+        <p class="section-subtitle">Get to know me a little better</p>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a passionate <strong>Full-Stack Engineer</strong> currently pursuing my Master's in Information Systems at the
-            <strong>University of Maryland, Baltimore County</strong>. With a strong foundation in computer science and hands-on
-            experience across the entire development stack, I bring ideas to life through clean, efficient code.
+            I'm a passionate <strong>AI Engineer & Full-Stack Developer</strong> currently pursuing my Master's in
+            Information Systems at the <strong>University of Maryland, Baltimore County</strong>. With 3+ years of
+            experience building production LLM systems, I specialize in
+            <strong>RAG pipelines, multi-agent orchestration, and AI integration</strong>.
           </p>
           <p>
-            My journey spans from building enterprise mobility solutions for <strong>5,000+ employees</strong> to integrating
-            <strong>Azure OpenAI</strong> into healthcare portals. I thrive at the intersection of full-stack development and
-            AI integration, creating systems that are both powerful and intuitive.
+            My journey spans from architecting <strong>multi-agent SDLC frameworks</strong> with 8 specialized AI agents
+            to building MCP AI agents with <strong>Claude Sonnet 4.6 (Amazon Bedrock)</strong> for healthcare portals.
+            I thrive at the intersection of AI engineering and full-stack development, shipping AI features at scale.
           </p>
           <p>
-            When I'm not coding, you'll find me exploring the latest in AI/ML, contributing to open-source projects,
-            or optimizing systems for better performance.
+            When I'm not building AI systems, you'll find me exploring the latest in LLM research,
+            contributing to agent frameworks, or optimizing RAG pipelines for better performance.
           </p>
         </div>
         <div class="about-stats reveal">
@@ -136,9 +161,9 @@
             <div class="stat-label">Users Impacted</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-number" data-count="20">0</div>
             <div class="stat-suffix">+</div>
-            <div class="stat-label">Client Applications</div>
+            <div class="stat-label">AI Agents Built</div>
           </div>
         </div>
       </div>
@@ -149,11 +174,14 @@
   <section class="section experience" id="experience">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">&lt;experience&gt;</span>
         <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
-        <div class="section-line"></div>
+        <p class="section-subtitle">My professional journey so far</p>
       </div>
       <div class="timeline">
+        <div class="timeline-line-track">
+          <div class="timeline-line-fill" id="timelineLineFill"></div>
+        </div>
+
         <!-- Minnodi -->
         <div class="timeline-item reveal">
           <div class="timeline-marker">
@@ -173,15 +201,16 @@
               </div>
             </div>
             <ul class="timeline-points">
-              <li>Integrated <strong>Azure OpenAI</strong> into a healthcare portal to analyze patient history and lab results, designing custom prompts that generate pre-consultation summaries and risk assessments for clinicians.</li>
-              <li>Developed <strong>10 RESTful APIs</strong> using Express.js and Supabase for patient records management, implementing role-based access control across 4 user roles.</li>
-              <li>Designed a normalized Supabase database schema with optimized indexing, reducing patient search latency by <strong>35%</strong> while supporting 1,000+ active records.</li>
+              <li>Built <strong>MCP AI agents</strong> leveraging Claude Sonnet 4.6 (Amazon Bedrock) for a healthcare portal, analyzing <strong>500+ patient histories</strong>, generating pre-consultation summaries, and a GitHub Assistant for commit summarization.</li>
+              <li>Implemented <strong>10 RESTful APIs</strong> for document workflows, patient records, and appointment scheduling with role-based access control across 4 user roles, cutting <strong>20+ hours of weekly administrative workload</strong>.</li>
+              <li>Designed normalized database schema with optimized indexing and relational queries, reducing data retrieval latency by <strong>35%</strong> while supporting 1,000+ active records.</li>
             </ul>
             <div class="timeline-tags">
-              <span class="tag">Azure OpenAI</span>
+              <span class="tag">Claude Sonnet 4.6</span>
+              <span class="tag">Amazon Bedrock</span>
+              <span class="tag">MCP</span>
               <span class="tag">Express.js</span>
               <span class="tag">Supabase</span>
-              <span class="tag">REST APIs</span>
               <span class="tag">Healthcare</span>
             </div>
           </div>
@@ -195,7 +224,7 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <h3 class="timeline-role">Software Engineer</h3>
+                <h3 class="timeline-role">Software Development Engineer</h3>
                 <div class="timeline-company">
                   <i class="fas fa-building"></i> RSM US LLP
                 </div>
@@ -206,16 +235,16 @@
               </div>
             </div>
             <ul class="timeline-points">
-              <li>Designed and deployed a full-stack <strong>Enterprise Mobility Solution</strong> (React.js, Node.js, Express.js, Azure SQL, Redis) automating 95% of scheduling workflows for <strong>5,000+ employees</strong>.</li>
-              <li>Optimized frontend performance across <strong>10 React.js applications</strong> hosted on Azure, reducing latency by 30% and earning the <strong>"Shining Star" award</strong>.</li>
-              <li>Engineered a multi-functional API endpoint with role-based access across <strong>10 permission levels</strong>, serving 2,000+ users and 10 microservice teams.</li>
+              <li>Led end-to-end design and Azure-hosted deployment of <strong>Enterprise Mobility Solution</strong> (React.js, Node.js, Express.js) within an Agile/Scrum framework, automating <strong>95% of scheduling workflows</strong> for 5,000+ employees, saving <strong>80+ admin hours monthly</strong> and earning the <strong>"Shining Star" award</strong>.</li>
+              <li>Optimized system performance across <strong>10 enterprise applications</strong> through configuration improvements and code refactoring, reducing latency by <strong>30%</strong>.</li>
+              <li>Engineered multi-functional API system with role-based access across <strong>10 permission levels</strong>, serving 2,000+ users and 10 teams across the enterprise, improving cross-team development efficiency by <strong>30%</strong>.</li>
             </ul>
             <div class="timeline-tags">
               <span class="tag">React.js</span>
               <span class="tag">Node.js</span>
-              <span class="tag">Azure SQL</span>
-              <span class="tag">Redis</span>
-              <span class="tag">Microservices</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Agile/Scrum</span>
             </div>
           </div>
         </div>
@@ -239,163 +268,15 @@
               </div>
             </div>
             <ul class="timeline-points">
-              <li>Developed <strong>20+ React.js components</strong> with TypeScript using atomic design, reducing development time by 40%.</li>
-              <li>Designed efficient <strong>MongoDB data models</strong> with indexing and caching, reducing query execution time by 40% for high-traffic operations.</li>
+              <li>Developed <strong>20+ reusable application components</strong> with TypeScript following established coding standards, reducing development time by <strong>40%</strong> and supporting consistent enterprise application architecture.</li>
+              <li>Designed efficient <strong>database models</strong> and implemented indexing strategies, reducing query execution time by <strong>40%</strong> and enhancing backend scalability for high-traffic enterprise operations.</li>
             </ul>
             <div class="timeline-tags">
               <span class="tag">React.js</span>
               <span class="tag">TypeScript</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Atomic Design</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Schaffen -->
-        <div class="timeline-item reveal">
-          <div class="timeline-marker">
-            <div class="timeline-dot"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Software Engineer</h3>
-                <div class="timeline-company">
-                  <i class="fas fa-building"></i> Schaffen Softwares
-                </div>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date"><i class="fas fa-calendar"></i> Aug 2020 – May 2021</span>
-                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</span>
-              </div>
-            </div>
-            <ul class="timeline-points">
-              <li>Developed UI/UX screens for <strong>5 web applications</strong> using React.js, Material-UI, and CSS animations, achieving 96% design-to-code accuracy.</li>
-              <li>Built and integrated <strong>RESTful APIs</strong> using Node.js and Express.js to support dynamic data rendering, handling 500+ daily API calls.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="tag">React.js</span>
-              <span class="tag">Material-UI</span>
               <span class="tag">Node.js</span>
-              <span class="tag">Express.js</span>
+              <span class="tag">Database Design</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="section skills" id="skills">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">&lt;skills&gt;</span>
-        <h2 class="section-title">Tech <span class="gradient-text">Arsenal</span></h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="skills-grid">
-        <!-- Languages -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-code"></i></div>
-            <h3>Languages</h3>
-          </div>
-          <div class="skill-items">
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />JavaScript</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS" />TypeScript</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />Python</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML5</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />CSS3</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />C</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />C++</div>
-          </div>
-        </div>
-
-        <!-- Frameworks -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
-            <h3>Frameworks & Libraries</h3>
-          </div>
-          <div class="skill-items">
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />React.js</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" />Node.js</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />Express.js</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" />FastAPI</div>
-            <div class="skill-pill"><i class="fas fa-bolt" style="color:#646CFF; font-size:18px;"></i>Vite</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />Pandas</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />NumPy</div>
-          </div>
-        </div>
-
-        <!-- Databases -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-database"></i></div>
-            <h3>Databases & Storage</h3>
-          </div>
-          <div class="skill-items">
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />MySQL</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />PostgreSQL</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />MongoDB</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />Firebase</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" />Oracle</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" />Redis</div>
-            <div class="skill-pill"><i class="fas fa-cloud" style="color:#3ECF8E; font-size:18px;"></i>Supabase</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="S3" />AWS S3</div>
-          </div>
-        </div>
-
-        <!-- Cloud & DevOps -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-            <h3>Cloud & DevOps</h3>
-          </div>
-          <div class="skill-items">
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />AWS</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />Azure</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" />GCP</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />Docker</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="K8s" />Kubernetes</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />Jenkins</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />Git</div>
-            <div class="skill-pill"><i class="fas fa-envelope-open-text" style="color:#FF6C37; font-size:18px;"></i>Postman</div>
-          </div>
-        </div>
-
-        <!-- AI & ML -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-brain"></i></div>
-            <h3>AI & Machine Learning</h3>
-          </div>
-          <div class="skill-items">
-            <div class="skill-pill"><i class="fas fa-robot" style="color:#10A37F; font-size:18px;"></i>LLMs</div>
-            <div class="skill-pill"><i class="fas fa-magic" style="color:#AB68FF; font-size:18px;"></i>Prompt Engineering</div>
-            <div class="skill-pill"><i class="fas fa-search-plus" style="color:#FF6B6B; font-size:18px;"></i>RAG</div>
-            <div class="skill-pill"><i class="fas fa-project-diagram" style="color:#00D4AA; font-size:18px;"></i>Vector Databases</div>
-            <div class="skill-pill"><i class="fas fa-cog" style="color:#10A37F; font-size:18px;"></i>OpenAI API</div>
-            <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure AI" />Azure OpenAI</div>
-            <div class="skill-pill"><i class="fas fa-link" style="color:#1C3C3C; font-size:18px;"></i>LangChain</div>
-          </div>
-        </div>
-
-        <!-- Core Competencies -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-cogs"></i></div>
-            <h3>Core Competencies</h3>
-          </div>
-          <div class="skill-items">
-            <div class="skill-pill"><i class="fas fa-exchange-alt" style="color:#61DAFB; font-size:18px;"></i>REST APIs</div>
-            <div class="skill-pill"><i class="fas fa-cubes" style="color:#FF9800; font-size:18px;"></i>Microservices</div>
-            <div class="skill-pill"><i class="fas fa-drafting-compass" style="color:#7C4DFF; font-size:18px;"></i>System Design</div>
-            <div class="skill-pill"><i class="fas fa-balance-scale" style="color:#00BCD4; font-size:18px;"></i>Load Balancing</div>
-            <div class="skill-pill"><i class="fas fa-server" style="color:#F44336; font-size:18px;"></i>Caching</div>
-            <div class="skill-pill"><i class="fas fa-shield-alt" style="color:#4CAF50; font-size:18px;"></i>API Security</div>
-            <div class="skill-pill"><i class="fas fa-sync-alt" style="color:#2196F3; font-size:18px;"></i>Agile/Scrum</div>
-            <div class="skill-pill"><i class="fas fa-vial" style="color:#E91E63; font-size:18px;"></i>TDD</div>
           </div>
         </div>
       </div>
@@ -406,61 +287,91 @@
   <section class="section projects" id="projects">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">&lt;projects&gt;</span>
         <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-        <div class="section-line"></div>
+        <p class="section-subtitle">Check out some of my recent work</p>
       </div>
       <div class="projects-grid">
+
+        <!-- Kernel -->
+        <div class="project-card reveal">
+          <div class="project-image project-image--kernel">
+            <div class="project-image-placeholder">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="project-badge">Featured</div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Kernel: AI-Native SDLC Framework</h3>
+            <p class="project-desc">
+              Architected a multi-agent SDLC runtime that orchestrates 8 specialized AI agents (PM, BA, Architect,
+              Developer, QA, Security, DevOps) across 3 phase-gated workflows, enforcing mandatory deliverables
+              and human approval gates before each phase transition.
+            </p>
+            <div class="project-tech">
+              <span>Multi-Agent Orchestration</span>
+              <span>Claude API</span>
+              <span>SDLC Design</span>
+              <span>Python</span>
+            </div>
+            <ul class="project-highlights">
+              <li><strong>8 specialized AI agents</strong> across PM, BA, Architect, Developer, QA, Security, DevOps roles</li>
+              <li><strong>3 phase-gated workflows</strong> with mandatory human approval gates</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/sumanth-14" target="_blank" class="project-link-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Invenio -->
         <div class="project-card reveal">
-          <div class="project-card-glow"></div>
-          <div class="project-card-content">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/sumanth-14" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
+          <div class="project-image project-image--invenio">
+            <div class="project-image-placeholder">
+              <i class="fas fa-briefcase"></i>
             </div>
-            <h3 class="project-title">Invenio</h3>
-            <p class="project-subtitle">AI-Powered Job Discovery Platform</p>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Invenio: AI-Powered Job Discovery</h3>
             <p class="project-desc">
-              End-to-end job discovery pipeline with automated web scraping, AI-powered profile matching using Gemini 3 Flash,
-              and real-time email notifications. Enables 15 users to track opportunities across 20 organizations with minimal manual effort.
+              Built a full-stack job discovery platform using Claude Code with vibe coding and context engineering
+              workflows, featuring intelligent multi-ATS scraping, real-time alerts and role-based filtering,
+              currently serving 20+ users.
             </p>
             <div class="project-tech">
               <span>React.js</span>
               <span>Node.js</span>
               <span>Express.js</span>
-              <span>Gemini 3 Flash</span>
+              <span>AWS</span>
               <span>Supabase</span>
+              <span>Gemini</span>
             </div>
-            <div class="project-metrics">
-              <div class="metric"><strong>20</strong> Organizations</div>
-              <div class="metric"><strong>15</strong> Active Users</div>
-              <div class="metric"><strong>AI</strong> Matching</div>
+            <ul class="project-highlights">
+              <li>Serving <strong>20+ users</strong> with intelligent multi-ATS scraping</li>
+              <li><strong>Real-time alerts</strong> and role-based filtering</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/sumanth-14" target="_blank" class="project-link-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
             </div>
           </div>
         </div>
 
         <!-- We Zaap -->
         <div class="project-card reveal">
-          <div class="project-card-glow"></div>
-          <div class="project-card-content">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-microphone-alt"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/sumanth-14" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
+          <div class="project-image project-image--wezaap">
+            <div class="project-image-placeholder">
+              <i class="fas fa-microphone-alt"></i>
             </div>
-            <h3 class="project-title">We Zaap</h3>
-            <p class="project-subtitle">AI Interview Simulator</p>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">We Zaap: AI Interview Simulator</h3>
             <p class="project-desc">
-              AI-powered interview simulator supporting 10 job roles with lazy loading and RAG-based context retrieval
-              for role-specific questions. Built with a FastAPI backend and React frontend, currently serving 50+ students.
+              Developed the frontend for an AI-powered interview simulator supporting 10 job roles, implementing
+              lazy loading and RAG-based context retrieval for role-specific questions, currently serving
+              50+ students.
             </p>
             <div class="project-tech">
               <span>React.js</span>
@@ -469,12 +380,272 @@
               <span>PostgreSQL</span>
               <span>LLMs</span>
             </div>
-            <div class="project-metrics">
-              <div class="metric"><strong>10</strong> Job Roles</div>
-              <div class="metric"><strong>50+</strong> Students</div>
-              <div class="metric"><strong>RAG</strong> Powered</div>
+            <ul class="project-highlights">
+              <li>Supporting <strong>10 job roles</strong> with RAG-powered role-specific questions</li>
+              <li>Serving <strong>50+ students</strong> with lazy loading for performance</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/sumanth-14" target="_blank" class="project-link-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
             </div>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">My expertise across various technologies and tools</p>
+      </div>
+      <div class="skills-tabs reveal">
+        <div class="skills-tab-nav">
+          <button class="skills-tab-btn active" data-tab="languages">Languages</button>
+          <button class="skills-tab-btn" data-tab="frameworks">Frameworks</button>
+          <button class="skills-tab-btn" data-tab="databases">Databases</button>
+          <button class="skills-tab-btn" data-tab="cloud">Cloud/DevOps</button>
+          <button class="skills-tab-btn" data-tab="ai">AI & ML</button>
+          <button class="skills-tab-btn" data-tab="concepts">Concepts</button>
+        </div>
+        <div class="skills-tab-content">
+
+          <!-- Languages -->
+          <div class="skills-tab-panel active" id="tab-languages">
+            <div class="skills-icon-grid">
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                <span>Python</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+                <span>TypeScript</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+                <span>HTML5</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+                <span>CSS3</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+                <span>C</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+                <span>C++</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="skills-tab-panel" id="tab-frameworks">
+            <div class="skills-icon-grid">
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                <span>React.js</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />
+                <span>Next.js</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                <span>Node.js</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" />
+                <span>Express.js</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="NestJS" />
+                <span>NestJS</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" />
+                <span>FastAPI</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" />
+                <span>.NET</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-link" style="color:#1C7C7C"></i></div>
+                <span>LangChain</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-project-diagram" style="color:#FF6600"></i></div>
+                <span>n8n</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skills-tab-panel" id="tab-databases">
+            <div class="skills-icon-grid">
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+                <span>MySQL</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+                <span>PostgreSQL</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />
+                <span>Firebase</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" />
+                <span>Oracle</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" />
+                <span>Redis</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-cloud" style="color:#3ECF8E"></i></div>
+                <span>Supabase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud/DevOps -->
+          <div class="skills-tab-panel" id="tab-cloud">
+            <div class="skills-icon-grid">
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />
+                <span>AWS</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
+                <span>Azure</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" />
+                <span>GCP</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                <span>Docker</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" />
+                <span>Kubernetes</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
+                <span>Jenkins</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                <span>Git</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                <span>GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI/ML -->
+          <div class="skills-tab-panel" id="tab-ai">
+            <div class="skills-icon-grid">
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-robot" style="color:#10A37F"></i></div>
+                <span>LLMs</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-search-plus" style="color:#FF6B6B"></i></div>
+                <span>RAG Pipelines</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-sitemap" style="color:#7c3aed"></i></div>
+                <span>Multi-Agent Orchestration</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-magic" style="color:#AB68FF"></i></div>
+                <span>Prompt Engineering</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-plug" style="color:#FF6B35"></i></div>
+                <span>MCP</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-brain" style="color:#DA7756"></i></div>
+                <span>Claude API</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="Amazon Bedrock" />
+                <span>Amazon Bedrock</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-project-diagram" style="color:#00D4AA"></i></div>
+                <span>Vector DBs</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-link" style="color:#1C7C7C"></i></div>
+                <span>LangChain</span>
+              </div>
+              <div class="skill-icon-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure AI" />
+                <span>Azure OpenAI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concepts -->
+          <div class="skills-tab-panel" id="tab-concepts">
+            <div class="skills-icon-grid">
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-exchange-alt" style="color:#61DAFB"></i></div>
+                <span>REST APIs</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-cubes" style="color:#FF9800"></i></div>
+                <span>Microservices</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-drafting-compass" style="color:#7C4DFF"></i></div>
+                <span>System Design</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-window-restore" style="color:#00BCD4"></i></div>
+                <span>Context Window Mgmt</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-server" style="color:#F44336"></i></div>
+                <span>Caching</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-shield-alt" style="color:#4CAF50"></i></div>
+                <span>API Security</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-sync-alt" style="color:#2196F3"></i></div>
+                <span>Agile/Scrum</span>
+              </div>
+              <div class="skill-icon-card">
+                <div class="skill-icon-fa"><i class="fas fa-code-branch" style="color:#E91E63"></i></div>
+                <span>CI/CD Pipelines</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -484,9 +655,8 @@
   <section class="section education" id="education">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">&lt;education&gt;</span>
         <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
-        <div class="section-line"></div>
+        <p class="section-subtitle">Academic background and qualifications</p>
       </div>
       <div class="education-grid">
         <div class="edu-card reveal">
@@ -508,13 +678,12 @@
                 <span class="gpa-value">3.85</span>
               </div>
               <div class="edu-coursework">
-                <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Software Engineering, Advanced Database,
-                Cloud Computing, System Design
+                <strong>Relevant Coursework:</strong> Artificial Intelligence, Natural Language Processing,
+                Data Structures & Algorithms, Cloud Computing, System Design
               </div>
             </div>
           </div>
         </div>
-
         <div class="edu-card reveal">
           <div class="edu-card-accent"></div>
           <div class="edu-card-content">
@@ -540,18 +709,57 @@
     </div>
   </section>
 
+  <!-- Recommendations Section -->
+  <!-- <section class="section recommendations" id="recommendations">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="gradient-text">Recommendations</span></h2>
+        <p class="section-subtitle">What mentors and colleagues say about my work</p>
+      </div>
+      <div class="recommendations-grid">
+        <div class="recommendation-card reveal">
+          <div class="recommendation-quote">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>"Sumanth has consistently demonstrated a strong work ethic, technical proficiency, and exceptional problem-solving skills. His ability to design scalable AI systems and collaborate effectively across teams makes him a standout engineer."</p>
+          </div>
+          <div class="recommendation-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Senior Colleague</h4>
+              <p>RSM US LLP</p>
+              <span class="recommendation-date">Colleague &bull; 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="recommendation-card reveal">
+          <div class="recommendation-quote">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>"Working with Sumanth was a great experience. His deep understanding of AI integration and full-stack development helped our team ship intelligent features faster while maintaining high code quality and production reliability."</p>
+          </div>
+          <div class="recommendation-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Engineering Manager</h4>
+              <p>Cognizant Technology Solutions</p>
+              <span class="recommendation-date">Manager &bull; 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
   <!-- Contact Section -->
   <section class="section contact" id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">&lt;contact&gt;</span>
         <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-        <div class="section-line"></div>
+        <p class="section-subtitle">I'm always open to new opportunities and conversations</p>
       </div>
       <div class="contact-content">
         <p class="contact-desc reveal">
           I'm currently open to new opportunities and would love to hear from you.
-          Whether you have a question, a project idea, or just want to say hello — my inbox is always open!
+          Whether you have a question, a project idea, or just want to say hello, my inbox is always open!
         </p>
         <div class="contact-cards reveal">
           <a href="mailto:saisumanthreddy216@gmail.com" class="contact-card">
@@ -583,7 +791,7 @@
             </div>
           </a>
         </div>
-        <a href="mailto:saisumanthreddy216@gmail.com" class="btn btn--primary btn--large reveal">
+        <a href="mailto:saisumanthreddy216@gmail.com" class="btn btn--primary btn--large reveal magnetic">
           <span>Say Hello</span>
           <i class="fas fa-paper-plane"></i>
         </a>
@@ -594,20 +802,39 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket"> /&gt;</span>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo-text">
+            <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket"> /&gt;</span>
+          </div>
+          <h3>Sai Sumanth Reddy Kachi</h3>
+          <p>AI Engineer &amp; Full-Stack Developer. Building production LLM systems, RAG pipelines, and multi-agent workflows at scale.</p>
         </div>
-        <p class="footer-text">Designed & Built by <strong>Sai Sumanth Reddy Kachi</strong></p>
-        <div class="footer-socials">
-          <a href="https://github.com/sumanth-14" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/sumanth14" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="mailto:saisumanthreddy216@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <a href="#about">About Me</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
         </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <a href="https://github.com/sumanth-14" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/sumanth14" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="mailto:saisumanthreddy216@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+          <a href="tel:+16674459499"><i class="fas fa-phone"></i> Phone</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sai Sumanth Reddy Kachi. All rights reserved.</p>
+        <!-- <p>Built with <i class="fas fa-heart" style="color: #7c3aed;"></i> using HTML, CSS, GSAP &amp; JS</p> -->
       </div>
     </div>
   </footer>
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
