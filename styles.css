@@ -52,7 +52,7 @@
 
   /* Project card accent colors */
   --project-kernel: linear-gradient(135deg, #7c3aed, #4f46e5);
-  --project-invenio: linear-gradient(135deg, #2563eb, #0891b2);
+  --project-keyfit: linear-gradient(135deg, #2563eb, #0891b2);
   --project-wezaap: linear-gradient(135deg, #059669, #0891b2);
 }
 
@@ -90,7 +90,7 @@
   --scrollbar-thumb-hover: rgba(255,255,255,0.25);
 
   --project-kernel: linear-gradient(135deg, #6d28d9, #4338ca);
-  --project-invenio: linear-gradient(135deg, #1d4ed8, #0e7490);
+  --project-keyfit: linear-gradient(135deg, #1d4ed8, #0e7490);
   --project-wezaap: linear-gradient(135deg, #047857, #0e7490);
 }
 
@@ -1050,8 +1050,8 @@ img { max-width: 100%; height: auto; }
   background: var(--project-kernel);
 }
 
-.project-image--invenio {
-  background: var(--project-invenio);
+.project-image--keyfit {
+  background: var(--project-keyfit);
 }
 
 .project-image--wezaap {
